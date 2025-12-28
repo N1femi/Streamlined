@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Tab Groups</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="nav">
+      <button class="nav-btn active" data-page="main">Timer</button>
+      <button class="nav-btn" data-page="settings">Settings</button>
+      <button class="nav-btn" data-page="theme">Theme</button>
+    </nav>
+    
+    <!-- Main Page -->
+    <div id="page-main" class="page active">
+      <header>
+        <h1>Pomodoro</h1>
+      </header>
+      
+      <div class="timer-section">
+        <div class="timer-display">
+          <div id="timer" class="timer">00:00</div>
+          <div id="session-type" class="session-type">Ready</div>
+        </div>
+        
+        <div class="timer-controls">
+          <button id="start-btn" class="btn btn-primary">Start</button>
+          <button id="pause-btn" class="btn btn-secondary" disabled>Pause</button>
+          <button id="stop-btn" class="btn btn-secondary" disabled>Stop</button>
+        </div>
+      </div>
+      
+      <div class="tab-groups-section">
+        <div class="tab-group-controls">
+          <button id="setup-work-tabs-btn" class="btn btn-outline">Setup Work Tabs</button>
+          <button id="setup-break-tabs-btn" class="btn btn-outline">Setup Break Tabs</button>
+        </div>
+      </div>
+      
+      <div class="status-section">
+        <div id="status" class="status"></div>
+      </div>
+    </div>
+    
+    <!-- Settings Page -->
+    <div id="page-settings" class="page">
+      <header>
+        <h1>Settings</h1>
+      </header>
+      
+      <div class="settings-section">
+        <div class="setting-group">
+          <label for="work-duration">Work Duration (minutes):</label>
+          <input type="number" id="work-duration" min="1" max="120" value="25">
+        </div>
+        
+        <div class="setting-group">
+          <label for="break-duration">Break Duration (minutes):</label>
+          <input type="number" id="break-duration" min="1" max="60" value="5">
+        </div>
+        
+        <div class="setting-group">
+          <label for="long-break-duration">Long Break Duration (minutes):</label>
+          <input type="number" id="long-break-duration" min="1" max="60" value="15">
+        </div>
+        
+        <div class="setting-group">
+          <label for="sessions-until-long-break">Sessions Until Long Break:</label>
+          <input type="number" id="sessions-until-long-break" min="1" max="10" value="4">
+        </div>
+        
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="auto-start">
+            Auto-start next session
+          </label>
+        </div>
+        
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="show-warning">
+            Show 5-minute warning notification
+          </label>
+        </div>
+        
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="show-countdown">
+            Show countdown notifications (every minute)
+          </label>
+        </div>
+        
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="show-badge">
+            Show countdown on extension badge
+          </label>
+        </div>
+        
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="show-tab-title">
+            Show countdown in tab title
+          </label>
+        </div>
+        
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="test-mode">
+            Test Mode (use seconds instead of minutes)
+          </label>
+        </div>
+        
+        <button id="save-settings-btn" class="btn btn-primary">Save Settings</button>
+      </div>
+    </div>
+    
+    <!-- Theme Page -->
+    <div id="page-theme" class="page">
+      <header>
+        <h1>Theme</h1>
+      </header>
+      
+      <div class="theme-section">
+        <div class="theme-options">
+          <div class="theme-option" data-theme="dark-red">
+            <div class="theme-preview dark-red"></div>
+            <span>Red</span>
+          </div>
+          <div class="theme-option" data-theme="dark-blue">
+            <div class="theme-preview dark-blue"></div>
+            <span>Blue</span>
+          </div>
+          <div class="theme-option" data-theme="dark-green">
+            <div class="theme-preview dark-green"></div>
+            <span>Green</span>
+          </div>
+          <div class="theme-option" data-theme="dark-purple">
+            <div class="theme-preview dark-purple"></div>
+            <span>Purple</span>
+          </div>
+          <div class="theme-option" data-theme="dark-orange">
+            <div class="theme-preview dark-orange"></div>
+            <span>Orange</span>
+          </div>
+          <div class="theme-option" data-theme="dark-pink">
+            <div class="theme-preview dark-pink"></div>
+            <span>Pink</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tab Selection Modal -->
+    <div id="tab-selection-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-title">Select Tabs</h2>
+          <button class="modal-close" id="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-selection-controls">
+            <button id="select-all-tabs" class="btn btn-outline small">Select All</button>
+            <button id="deselect-all-tabs" class="btn btn-outline small">Deselect All</button>
+          </div>
+          <div id="tabs-list" class="tabs-list"></div>
+        </div>
+        <div class="modal-footer">
+          <button id="cancel-selection" class="btn btn-secondary">Cancel</button>
+          <button id="save-selection" class="btn btn-primary">Save Selected Tabs</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
