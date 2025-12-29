@@ -8,7 +8,7 @@ A Chrome extension that uses tab groupings to organize your work and break tabs,
 - 📑 **Tab Grouping**: Automatically organizes tabs into work and break groups
 - ⏰ **Auto Tab Management**: Opens work tabs during work sessions, break tabs during breaks
 - 🔄 **Auto-start**: Option to automatically start the next session
-- 🎨 **Beautiful UI**: Modern, gradient-based interface
+- 🎨 **Beautiful UI**: Modern & customizable interface
 
 ## Installation
 
