@@ -12,6 +12,7 @@
 
 #### JavaScript:
 - `elem.dataset` every element can have a special attribute prefixed with *"data-"* this would give a full list too
+- `iterable.slice(startIndex, endIndex)` basically makes a shallow copy of whatever window is specified from the between the two indexes
 
 
 #### Additional Notes:
