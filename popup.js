@@ -27,15 +27,15 @@ async function loadTheme() {
 // Apply theme
 function applyTheme(theme) {
   const themes = {
-    'dark-red': '#c41e3a',
-    'dark-blue': '#1e3ac4',
-    'dark-green': '#3ac41e',
-    'dark-purple': '#8b1ec4',
-    'dark-orange': '#c47a1e',
-    'dark-pink': '#c41e7a'
+    'red': '#c41e3a',
+    'blue': '#1e6cc4',
+    'green': '#3ac41e',
+    'purple': '#8b1ec4',
+    'orange': '#c47a1e',
+    'pink': '#c41e7a'
   };
   
-  const accentColor = themes[theme] || themes['dark-red'];
+  const accentColor = themes[theme] || themes['red'];
   document.documentElement.style.setProperty('--accent-color', accentColor);
   
   // Convert hex to rgb for status backgrounds

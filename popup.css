@@ -1,3 +1,9 @@
+:root {
+  --og-color: #c41e3a;
+  --accent-color: #c41e3a;
+  
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -46,13 +52,13 @@ body {
 }
 
 .nav-btn:hover {
-  color: var(--accent-color, #c41e3a);
+  color: var(--accent-color, --og-color);
   background: #2a2a2a;
 }
 
 .nav-btn.active {
-  color: var(--accent-color, #c41e3a);
-  border-bottom-color: var(--accent-color, #c41e3a);
+  color: var(--accent-color, --og-color);
+  border-bottom-color: var(--accent-color, --og-color);
 }
 
 /* Pages */
@@ -96,12 +102,12 @@ header {
   text-align: center;
   margin-bottom: 16px;
   padding-bottom: 12px;
-  border-bottom: 2px solid var(--accent-color, #c41e3a);
+  border-bottom: 2px solid var(--accent-color, --og-color);
 }
 
 header h1 {
   font-size: 20px;
-  color: var(--accent-color, #c41e3a);
+  color: var(--accent-color, --og-color);
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -109,7 +115,7 @@ header h1 {
 }
 
 .timer-section {
-  background: var(--accent-color, #c41e3a);
+  background: var(--accent-color, --og-color);
   border-radius: 8px;
   padding: 20px 16px;
   margin-bottom: 16px;
@@ -168,7 +174,7 @@ header h1 {
 
 .btn-primary {
   background: white;
-  color: var(--accent-color, #c41e3a);
+  color: var(--accent-color, --og-color);
 }
 
 .btn-primary:hover:not(:disabled) {
@@ -187,14 +193,14 @@ header h1 {
 
 .btn-outline {
   background: transparent;
-  color: var(--accent-color, #c41e3a);
-  border: 1px solid var(--accent-color, #c41e3a);
+  color: var(--accent-color, --og-color);
+  border: 1px solid var(--accent-color, --og-color);
   padding: 8px 16px;
   font-size: 12px;
 }
 
 .btn-outline:hover {
-  background: var(--accent-color, #c41e3a);
+  background: var(--accent-color, --og-color);
   color: white;
 }
 
@@ -211,14 +217,14 @@ header h1 {
 
 .settings-section:hover,
 .tab-groups-section:hover {
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
 }
 
 .settings-section h2,
 .tab-groups-section h2 {
   font-size: 14px;
   margin-bottom: 10px;
-  color: var(--accent-color, #c41e3a);
+  color: var(--accent-color, --og-color);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -249,12 +255,12 @@ header h1 {
 }
 
 .setting-group input[type="number"]:hover {
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
 }
 
 .setting-group input[type="number"]:focus {
   outline: none;
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
 }
 
 .setting-group input[type="checkbox"] {
@@ -273,13 +279,13 @@ header h1 {
 }
 
 .setting-group input[type="checkbox"]:hover {
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
   background: #252525;
 }
 
 .setting-group input[type="checkbox"]:checked {
-  background: var(--accent-color, #c41e3a);
-  border-color: var(--accent-color, #c41e3a);
+  background: var(--accent-color, --og-color);
+  border-color: var(--accent-color, --og-color);
 }
 
 .setting-group input[type="checkbox"]:checked::after {
@@ -350,7 +356,7 @@ header h1 {
 .status.error,
 .status.info {
   background: var(--status-bg, rgba(196, 30, 58, 0.15));
-  color: var(--status-color, var(--accent-color, #c41e3a));
+  color: var(--status-color, var(--accent-color, --og-color));
   border: 1px solid var(--status-border, rgba(196, 30, 58, 0.3));
 }
 
@@ -385,7 +391,7 @@ header h1 {
 
 .modal-header {
   padding: 16px;
-  border-bottom: 2px solid var(--accent-color, #c41e3a);
+  border-bottom: 2px solid var(--accent-color, --og-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -462,11 +468,11 @@ header h1 {
 }
 
 .tab-item:hover {
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
 }
 
 .modal-close:hover {
-  color: var(--accent-color, #c41e3a);
+  color: var(--accent-color, --og-color);
 }
 
 /* Theme Section */
@@ -503,14 +509,14 @@ header h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--accent-color, #c41e3a);
+  background: var(--accent-color, --og-color);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
 }
 
 .theme-option:hover {
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -520,7 +526,7 @@ header h1 {
 }
 
 .theme-option.active {
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
   border-width: 3px;
   box-shadow: 0 0 0 2px rgba(196, 30, 58, 0.2);
 }
@@ -542,37 +548,37 @@ header h1 {
 
 .theme-option:hover .theme-preview {
   transform: scale(1.1);
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
 }
 
 .theme-option.active .theme-preview {
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
   border-width: 4px;
   box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.3);
 }
 
-.theme-preview.dark-red {
-  background: linear-gradient(135deg, #c41e3a 0%, #8b1528 100%);
+.theme-preview.red {
+  background: #c41e3a
 }
 
-.theme-preview.dark-blue {
-  background: linear-gradient(135deg, #1e3ac4 0%, #15288b 100%);
+.theme-preview.blue {
+  background: #1e6cc4
 }
 
-.theme-preview.dark-green {
-  background: linear-gradient(135deg, #3ac41e 0%, #288b15 100%);
+.theme-preview.green {
+  background: #3ac41e
 }
 
-.theme-preview.dark-purple {
-  background: linear-gradient(135deg, #8b1ec4 0%, #5a158b 100%);
+.theme-preview.purple {
+  background: #8b1ec4
 }
 
-.theme-preview.dark-orange {
-  background: linear-gradient(135deg, #c47a1e 0%, #8b5515 100%);
+.theme-preview.orange {
+  background: #c47a1e
 }
 
-.theme-preview.dark-pink {
-  background: linear-gradient(135deg, #c41e7a 0%, #8b1555 100%);
+.theme-preview.pink {
+  background: #c41e7a
 }
 
 .theme-option span {
@@ -585,11 +591,11 @@ header h1 {
 }
 
 .theme-option:hover span {
-  color: var(--accent-color, #c41e3a);
+  color: var(--accent-color, --og-color);
 }
 
 .theme-option.active span {
-  color: var(--accent-color, #c41e3a);
+  color: var(--accent-color, --og-color);
   font-weight: 600;
 }
 
@@ -609,13 +615,13 @@ header h1 {
 }
 
 .tab-item input[type="checkbox"]:hover {
-  border-color: var(--accent-color, #c41e3a);
+  border-color: var(--accent-color, --og-color);
   background: #2a2a2a;
 }
 
 .tab-item input[type="checkbox"]:checked {
-  background: var(--accent-color, #c41e3a);
-  border-color: var(--accent-color, #c41e3a);
+  background: var(--accent-color, --og-color);
+  border-color: var(--accent-color, --og-color);
 }
 
 .tab-item input[type="checkbox"]:checked::after {
