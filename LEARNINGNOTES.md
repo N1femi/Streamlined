@@ -1,4 +1,6 @@
 # A Learner's Notes...
+![Person Studying Intensely](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExczl4OW0yeXl1ZWM0ZHVudDR6OTByb3VtMHZqdHV1Y2s0bHZvN3NuaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fhAwk4DnqNgw8/giphy.gif)
+
 ### Used to keep track of concepts I've learned or encountered
 *Keeping track allows me to actively retain and be able to look back and confirm past misunderstandings or absent knowledge :)*
 
