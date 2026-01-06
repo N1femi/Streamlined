@@ -9,11 +9,13 @@
 #### CSS:
 - `:root` enabled configuration for global variables
 
+- `.selector:hover .anotherSelector {...}` when selector is hovered `.anotherSelector` will be changed accordingly, relationship must be parent -> child or sibling
+
 
 #### JavaScript:
 - `elem.dataset` every element can have a special attribute prefixed with *"data-"* this would give a full list too
-- `iterable.slice(startIndex, endIndex)` basically makes a shallow copy of whatever window is specified from the between the two indexes
 
+- `iterable.slice(startIndex, endIndex)` basically makes a shallow copy of whatever window is specified from the between the two indexes
 
 #### Additional Notes:
 - Instead of using multiple pages and switching through them, having an `active` keyword in the different **divs** allowed me to toggle which one's have `display: none`
