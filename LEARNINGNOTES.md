@@ -17,5 +17,7 @@
 
 - `iterable.slice(startIndex, endIndex)` basically makes a shallow copy of whatever window is specified from the between the two indexes
 
+- `chrome.storage` 3 types: `sync`, `session`, and `local` with each their own purposes
+
 #### Additional Notes:
 - Instead of using multiple pages and switching through them, having an `active` keyword in the different **divs** allowed me to toggle which one's have `display: none`
