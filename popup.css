@@ -482,9 +482,8 @@ header h1 {
 
 .theme-options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 8px 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
 .theme-option {
