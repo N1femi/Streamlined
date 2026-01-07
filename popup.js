@@ -57,6 +57,7 @@ function applyTheme(theme) {
 // Load settings from storage
 async function loadSettings() {
   const result = await chrome.storage.sync.get(['settings'])
+
   const settings = result.settings || {
     workDuration: 25,
     breakDuration: 5,
@@ -87,6 +88,7 @@ async function loadSettings() {
 // Update duration labels based on test mode
 function updateDurationLabels(testMode) {
   const unit = testMode ? 'seconds' : 'minutes'
+
   document.querySelector('label[for="work-duration"]').textContent = `Work Duration (${unit}):`
   document.querySelector('label[for="break-duration"]').textContent = `Break Duration (${unit}):`
   document.querySelector('label[for="long-break-duration"]').textContent = `Long Break Duration (${unit}):`
@@ -95,6 +97,7 @@ function updateDurationLabels(testMode) {
 // Save settings to storage
 async function saveSettings() {
   const testMode = document.getElementById('test-mode').checked
+
   const settings = {
     workDuration: parseInt(document.getElementById('work-duration').value),
     breakDuration: parseInt(document.getElementById('break-duration').value),
