@@ -1,17 +1,12 @@
-// Background service worker for Pomodoro Tab Groups
-
-// Default settings
 const DEFAULT_SETTINGS = {
-  workDuration: 25, // minutes
-  breakDuration: 5, // minutes
-  longBreakDuration: 15, // minutes
+  workDuration: 25,
+  breakDuration: 5,
+  longBreakDuration: 15,
   sessionsUntilLongBreak: 4,
   autoStart: false,
   showWarning: true,
   showCountdown: false,
-  testMode: false, // If true, durations are in seconds instead of minutes
-  showBadge: true, // Show countdown on extension badge
-  showTabTitle: true // Show countdown in tab title
+  testMode: false, // Changes minutes to seconds if true
 }
 
 // State management
@@ -33,19 +28,10 @@ let currentState = {
 
 // Initialize on install
 chrome.runtime.onInstalled.addListener(async () => {
-  const settings = await chrome.storage.sync.get(['settings'])
-  if (!settings.settings) {
+  const syncedStorage = await chrome.storage.sync.get(['settings'])
+
+  if (!syncedStorage.settings) {
     await chrome.storage.sync.set({ settings: DEFAULT_SETTINGS })
   }
   await chrome.storage.local.set({ state: currentState })
-  
-  // Request notification permission
-  chrome.notifications.create({
-    type: 'basic',
-    iconUrl: 'icon48.png',
-    title: 'Pomodoro Tab Groups',
-    message: 'Extension installed! Click the icon to get started.'
-  }, () => {
-    // Permission requested (or already granted)
-  })
 })
