@@ -465,6 +465,12 @@ function deselectAllTabs() {
   checkboxes.forEach(checkbox => checkbox.checked = false)
 }
 
+// Select all within active group
+/*function selectAllActive() {
+  const activeTabs = []
+
+}*/
+
 // Close tab selection modal
 function closeTabSelectionModal() {
   const modal = document.getElementById('tab-selection-modal')
