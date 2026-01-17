@@ -352,6 +352,7 @@ function setupEventListeners() {
   document.getElementById('save-selection').addEventListener('click', saveSelectedTabs)
   document.getElementById('select-all-tabs').addEventListener('click', selectAllTabs)
   document.getElementById('deselect-all-tabs').addEventListener('click', deselectAllTabs)
+  document.getElementById('select-group-tabs').addEventListener('click', selectAllActive)
   
   // Close modal when clicking outside
   document.getElementById('tab-selection-modal').addEventListener('click', (e) => {
@@ -466,10 +467,11 @@ function deselectAllTabs() {
 }
 
 // Select all within active group
-/*function selectAllActive() {
+function selectAllActive() {
   const activeTabs = []
 
-}*/
+  console.log("Fired Function!")
+}
 
 // Close tab selection modal
 function closeTabSelectionModal() {
