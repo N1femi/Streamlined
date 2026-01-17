@@ -467,11 +467,41 @@ function deselectAllTabs() {
 }
 
 // Select all within active group
-function selectAllActive() {
-  const activeTabs = []
-
+async function selectAllActive() {
   console.log("Fired Function!")
+
+  async function getCurrentTab() {
+    const [tab] = await chrome.tabs.query({
+      active: true,
+      lastFocusedWindow: true
+    })
+    return tab
+  }
+
+  const currentTab = await getCurrentTab()
+
+  // If tab is not grouped
+  if (currentTab.groupId === -1) {
+    console.log("Tab is not in a group")
+    return
+  }
+
+  const targettedGroupId = currentTab.groupId
+
+  const groupedTabs = await chrome.tabs.query({
+    groupId: targettedGroupId
+  })
+
+  console.log("Grouped tabs:", groupedTabs)
+
+  let tabsToBeSelected = []
+
+
+  for (const tab of groupedTabs) {
+    
+  }
 }
+
 
 // Close tab selection modal
 function closeTabSelectionModal() {
