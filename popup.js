@@ -491,14 +491,15 @@ async function selectAllActive() {
   const groupedTabs = await chrome.tabs.query({
     groupId: targettedGroupId
   })
-
-  console.log("Grouped tabs:", groupedTabs)
-
-  let tabsToBeSelected = []
-
+  
+  const checkboxes = document.querySelectorAll('#tabs-list input[type="checkbox"]')
 
   for (const tab of groupedTabs) {
-    
+    checkboxes.forEach(checkbox => {
+      if (checkbox.dataset.tabId == tab.id) {
+        checkbox.checked = true
+      }
+    });
   }
 }
 
