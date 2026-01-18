@@ -482,7 +482,7 @@ async function selectAllActive() {
 
   // If tab is not grouped
   if (currentTab.groupId === -1) {
-    console.log("Tab is not in a group")
+    alert("Tab is not currently in group!")
     return
   }
 
@@ -491,7 +491,7 @@ async function selectAllActive() {
   const groupedTabs = await chrome.tabs.query({
     groupId: targettedGroupId
   })
-  
+
   const checkboxes = document.querySelectorAll('#tabs-list input[type="checkbox"]')
 
   for (const tab of groupedTabs) {
