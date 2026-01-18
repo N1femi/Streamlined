@@ -19,5 +19,7 @@
 
 - `chrome.storage` 3 types: `sync`, `session`, and `local` with each their own purposes
 
+- `[ArrayDestructuring]` & `{Object Destructuring}`
+
 #### Additional Notes:
 - Instead of using multiple pages and switching through them, having an `active` keyword in the different **divs** allowed me to toggle which one's have `display: none`
