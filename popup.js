@@ -569,6 +569,8 @@ async function saveSelectedTabs() {
     const checkboxes = document.querySelectorAll(
       '#tabs-list input[type="checkbox"]:checked',
     )
+
+    console.log("Got checkboxes:", checkboxes)
     const selectedUrls = Array.from(checkboxes).map((cb) =>
       cb.getAttribute("data-tab-url"),
     )
@@ -606,9 +608,10 @@ async function saveSelectedTabs() {
 
     const typeName = currentTabSelectionType === "work" ? "work" : "break"
     showStatus(`Saved ${uniqueUrls.length} ${typeName} tabs!`, "success")
+    
   } catch (error) {
+    alert("Error saving tabs")
     console.error("Error saving selected tabs:", error)
-    showStatus("Error saving tabs", "error")
   }
 }
 
