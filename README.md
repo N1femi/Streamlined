@@ -77,4 +77,4 @@ The extension uses:
 - Chrome system pages (chrome://) are automatically excluded from tab groups
 - Tab groups are created automatically when needed
 - The extension remembers your tab configurations across browser restarts
-
+- View LearningNotes to learn more about components used to build this project, all is free to contribute to the LearningNotes if I missed something of value
